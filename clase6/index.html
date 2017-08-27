@@ -18,3 +18,26 @@
  
   </body>
  </html>
+
+
+
+const db = firebase.database(); //objeto de base de datos
+const Alumnos = db.ref().child('alumnos');  //Referencia a tabla Alumno
+{
+   "alumnos":{
+      "alumno_uno":{
+          nombre:"osmel",
+          apellidos:"calderón",
+          edad:"40",
+       }   
+   }
+}
+
+
+
+
+ firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
